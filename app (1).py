@@ -14,6 +14,7 @@ import numpy as np
 import streamlit as st
 import pickle
 import numpy as np
+LR = "model.pkl" 
 
 # Load the trained model
 with open(LR, "rb") as file:
