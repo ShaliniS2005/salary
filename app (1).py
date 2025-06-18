@@ -14,7 +14,7 @@ import numpy as np
 import streamlit as st
 import pickle
 import numpy as np
-LR = "Salary Prediction (2).pkl" 
+LR = "Salary Prediction_2.pkl" 
 
 # Load the trained model
 with open(LR, "rb") as file:
