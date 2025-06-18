@@ -11,7 +11,6 @@ Original file is located at
 import streamlit as st
 import pickle
 import numpy as np
-!pip install streamlit
 import streamlit as st
 import pickle
 import numpy as np
