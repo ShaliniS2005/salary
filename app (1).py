@@ -15,6 +15,10 @@ import streamlit as st
 import pickle
 import numpy as np
 LR = "Salary Prediction_2.pkl" 
+import joblib
+
+model = joblib.load("salary_prediction_2.pkl")
+
 
 # Load the trained model
 with open(LR, "rb") as file:
