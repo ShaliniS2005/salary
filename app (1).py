@@ -16,7 +16,7 @@ import pickle
 import numpy as np
 
 # Load the trained model
-with open(model, "rb") as file:
+with open(LR, "rb") as file:
     model = pickle.load(file)
 
 st.title("Salary Prediction App")
