@@ -19,8 +19,6 @@ import numpy as np
 with open(LR, "rb") as file:
     model = pickle.load(file)
 
-st.title("Salary Prediction App")
-st.write("Fill the information below to predict the salary:")
 
 # --- Example Input Fields ---
 # You should update these according to your model's input features
@@ -42,8 +40,8 @@ input_data = np.array([
 if st.button("Predict Salary"):
     salary = model.predict(input_data)
     st.success(f"Predicted Salary: ₹{salary[0]:,.2f}")
-st.title("Salary Prediction App")
-st.write("Fill the information below to predict the salary:")
+    st.title("Salary Prediction App")
+    st.write("Fill the information below to predict the salary:")
 
 # --- Example Input Fields ---
 # You should update these according to your model's input features
