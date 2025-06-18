@@ -14,11 +14,10 @@ import numpy as np
 import streamlit as st
 import pickle
 import numpy as np
-LR = "Salary Prediction_2.pkl" 
 
 
 try:
-    with open('LR', 'rb') as file:
+    with open('Salary Prediction_2.pkl', 'rb') as file:
       model=pickle.load(file)
 except FileNotFoundError:
     st.error("⚠️ Model file not found. Make sure 'model.pkl' is in the same folder.")
