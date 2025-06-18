@@ -17,7 +17,7 @@ import numpy as np
 
 
 try:
-    with open('Salary Prediction_2.pkl', 'rb') as file:
+    with open('model.pkl', 'rb') as file:
       model=pickle.load(file)
 except FileNotFoundError:
     st.error("⚠️ Model file not found. Make sure 'model.pkl' is in the same folder.")
