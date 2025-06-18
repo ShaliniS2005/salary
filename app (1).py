@@ -15,15 +15,17 @@ import streamlit as st
 import pickle
 import numpy as np
 LR = "Salary Prediction_2.pkl" 
-import joblib
-
-model = joblib.load("salary_prediction_2.pkl")
 
 
-# Load the trained model
-with open(LR, "rb") as file:
-    model = pickle.load(file)
-
+try:
+    with open('model.pkl', 'rb') as file:
+      model=pickle.load(file)
+except FileNotFoundError:
+    st.error("⚠️ Model file not found. Make sure 'model.pkl' is in the same folder.")
+    st.stop()
+except Exception as e:
+    st.error(f"⚠️ Error loading model: {e}")
+    st.stop()
 
 # --- Example Input Fields ---
 # You should update these according to your model's input features
